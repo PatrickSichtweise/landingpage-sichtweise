@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56" role="img" aria-label="sicht:weise Bildmarke">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="sicht:weise Marke">
   <title>sicht:weise — Bildmarke</title>
-  <!-- Tree-in-circle (compact square mark) -->
-  <circle cx="28" cy="28" r="26" fill="none" stroke="#4B864F" stroke-width="2"/>
-  <rect x="26.5" y="33" width="3" height="10" fill="#4B864F"/>
-  <polygon points="28,10 40,27 16,27" fill="#4B864F"/>
-  <polygon points="28,17 42,32 14,32" fill="#4B864F" opacity="0.55"/>
+  <circle cx="40" cy="28" r="9" fill="#c47554"></circle>
+  <circle cx="40" cy="60" r="9" fill="#1a1d1c"></circle>
 </svg>
