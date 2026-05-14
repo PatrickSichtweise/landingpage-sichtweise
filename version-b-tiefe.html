@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>sicht:weise — Executive Coaching für Führung mit Substanz | [Vorname Nachname]</title>
+<meta name="description" content="sicht:weise — Executive Coaching für Führungskräfte im DACH-Raum. Klarheit, Resilienz und Tiefe für anspruchsvolle Rollen. München · Wien · Zürich · Online." />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="[Vorname Nachname]" />
+<link rel="canonical" href="https://www.sicht-weise.de/" />
+
+<!-- OpenGraph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content="sicht:weise" />
+<meta property="og:title" content="sicht:weise — Executive Coaching für Führung mit Substanz" />
+<meta property="og:description" content="Klarheit, Resilienz und Tiefe für anspruchsvolle Rollen." />
+<meta property="og:url" content="https://www.sicht-weise.de/" />
+<meta property="og:image" content="https://www.sicht-weise.de/assets/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
+<link rel="alternate" hreflang="de" href="https://www.sicht-weise.de/" />
+
+<link rel="stylesheet" href="styles/tokens.css" />
+<style>
+  /* Version B — Tiefe: editorial, bold display type, asymmetric, ink-dominant */
+
+  body { background: var(--ink); color: var(--cream); }
+
+  /* ---- Nav ---- */
+  .nav-b {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(26,29,28,0.82);
+    backdrop-filter: saturate(160%) blur(10px);
+    -webkit-backdrop-filter: saturate(160%) blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .nav-b.is-scrolled { border-color: rgba(244,239,230,0.1); }
+  .nav-b__inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: var(--s-4) var(--s-6);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--s-7);
+  }
+  .nav-b__logo { height: 24px; }
+  .nav-b__links {
+    display: flex; gap: var(--s-6); justify-content: center;
+    font-size: var(--t-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(244,239,230,0.7);
+  }
+  .nav-b__links a { text-decoration: none; transition: color 0.2s; }
+  .nav-b__links a:hover { color: var(--clay); }
+  .nav-b__cta {
+    text-decoration: none;
+    color: var(--ink); background: var(--clay);
+    padding: 10px 18px;
+    font-size: var(--t-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .nav-b__cta:hover { background: #d8825d; }
+  @media (max-width: 840px) {
+    .nav-b__links { display: none; }
+    .nav-b__inner { grid-template-columns: 1fr auto; }
+  }
+
+  /* ---- HERO — editorial cover ---- */
+  .cover {
+    position: relative;
+    min-height: calc(100vh - 60px);
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: var(--s-6) var(--s-6) var(--s-7);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+  }
+  .cover__top {
+    display: flex; justify-content: space-between;
+    font-size: var(--t-xs);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(244,239,230,0.5);
+    border-bottom: 1px solid rgba(244,239,230,0.12);
+    padding-bottom: var(--s-3);
+  }
+  .cover__top span:last-child::before { content: "—"; margin-right: var(--s-2); color: var(--clay); }
+  .cover__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding: var(--s-8) 0;
+    position: relative;
+  }
+  .cover__h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(64px, 11vw, 180px);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--paper);
+    max-width: 14ch;
+  }
+  .cover__h1 .l-italic { font-style: italic; color: var(--clay); display: inline-block; }
+  .cover__h1 .l-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--paper);
+    text-stroke: 1.5px var(--paper);
+  }
+  .cover__lede {
+    margin-top: var(--s-7);
+    max-width: 46ch;
+    font-size: var(--t-lg);
+    line-height: 1.5;
+    color: rgba(244,239,230,0.75);
+  }
+  .cover__bottom {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: var(--s-7);
+    align-items: end;
+    padding-top: var(--s-6);
+    border-top: 1px solid rgba(244,239,230,0.12);
+  }
+  .cover__cta-row { display: flex; gap: var(--s-5); align-items: center; flex-wrap: wrap; }
+  .btn-clay {
+    text-decoration: none;
+    padding: 18px 32px;
+    background: var(--clay);
+    color: var(--ink);
+    font-size: var(--t-base);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    display: inline-flex; align-items: center; gap: var(--s-3);
+    transition: background 0.2s;
+  }
+  .btn-clay:hover { background: #d8825d; }
+  .btn-link-b {
+    text-decoration: none;
+    color: var(--paper);
+    font-size: var(--t-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(244,239,230,0.3);
+    padding-bottom: 4px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-link-b:hover { color: var(--clay); border-color: var(--clay); }
+  .cover__factoid {
+    border-left: 1px solid rgba(244,239,230,0.18);
+    padding-left: var(--s-5);
+  }
+  .cover__factoid b {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: var(--t-2xl);
+    line-height: 1;
+    color: var(--paper);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--s-3);
+  }
+  .cover__factoid span { font-size: var(--t-sm); color: rgba(244,239,230,0.6); line-height: 1.5; }
+  @media (max-width: 960px) {
+    .cover__bottom { grid-template-columns: 1fr; gap: var(--s-5); }
+    .cover__h1 { font-size: clamp(56px, 14vw, 110px); }
+  }
+
+  /* ---- Marquee strip ---- */
+  .marquee {
+    background: var(--paper); color: var(--ink);
+    padding: var(--s-5) 0;
+    overflow: hidden;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .marquee__inner {
+    display: flex; gap: var(--s-8);
+    animation: marquee 40s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .marquee span { font-family: var(--serif); font-size: var(--t-xl); letter-spacing: -0.01em; }
+  .marquee span::before { content: "•"; color: var(--clay); margin-right: var(--s-7); }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+
+  /* ---- Section base (dark) ---- */
+  .sec-b { padding: var(--s-11) var(--s-6); position: relative; }
+  .sec-b__inner { max-width: 1320px; margin: 0 auto; }
+  .sec-b__head {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--s-7);
+    margin-bottom: var(--s-9);
+    align-items: start;
+  }
+  .sec-b__num {
+    font-family: var(--serif);
+    font-size: var(--t-md);
+    color: var(--clay);
+    letter-spacing: 0.04em;
+    padding-top: 12px;
+    border-top: 1px solid var(--clay);
+    align-self: start;
+  }
+  .sec-b__title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 80px);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    color: var(--paper);
+    max-width: 14ch;
+  }
+  .sec-b__title em { font-style: italic; color: var(--clay); }
+  @media (max-width: 760px) { .sec-b__head { grid-template-columns: 1fr; gap: var(--s-4); } }
+
+  /* ---- Manifesto / About ---- */
+  .manifesto__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-9); }
+  .manifesto__lead {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(24px, 2.6vw, 36px);
+    line-height: 1.3;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+    max-width: 22ch;
+  }
+  .manifesto__lead::first-letter { color: var(--clay); }
+  .manifesto__body p {
+    font-size: var(--t-md);
+    line-height: 1.7;
+    color: rgba(244,239,230,0.78);
+    margin-bottom: var(--s-5);
+    max-width: 54ch;
+  }
+  .manifesto__sig {
+    margin-top: var(--s-6);
+    padding-top: var(--s-5);
+    border-top: 1px solid rgba(244,239,230,0.18);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-5);
+    font-size: var(--t-sm);
+    color: rgba(244,239,230,0.6);
+  }
+  .manifesto__sig strong { display: block; color: var(--paper); font-weight: 500; margin-bottom: 4px; }
+  @media (max-width: 880px) { .manifesto__grid { grid-template-columns: 1fr; } }
+
+  /* ---- Offer (services) ---- */
+  .offer { background: var(--paper); color: var(--ink); }
+  .offer .sec-b__title { color: var(--ink); }
+  .offer .sec-b__title em { color: var(--clay-deep); }
+  .offer .sec-b__num { color: var(--clay-deep); border-top-color: var(--clay-deep); }
+
+  .offer__list { display: flex; flex-direction: column; border-top: 1px solid var(--ink); }
+  .offer__item {
+    display: grid;
+    grid-template-columns: 80px 280px 1fr 200px;
+    gap: var(--s-6);
+    padding: var(--s-7) 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+    transition: padding 0.3s;
+  }
+  .offer__item:hover { padding-left: var(--s-4); }
+  .offer__num { font-family: var(--serif); font-size: var(--t-md); color: var(--clay-deep); padding-top: 4px; }
+  .offer__heading {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3vw, 44px);
+    line-height: 1.05;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+  .offer__heading small {
+    display: block;
+    font-family: var(--sans);
+    font-size: var(--t-xs);
+    color: var(--ink-soft);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-top: var(--s-3);
+    font-weight: 500;
+  }
+  .offer__body { font-size: var(--t-base); line-height: 1.65; color: var(--ink-soft); max-width: 56ch; }
+  .offer__body ul { margin-top: var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); font-size: var(--t-sm); }
+  .offer__body ul li { color: var(--ink); padding: 4px 0; }
+  .offer__body ul li::before { content: "+"; color: var(--clay-deep); margin-right: 6px; font-weight: 600; }
+  .offer__meta {
+    text-align: right;
+    font-size: var(--t-sm);
+    color: var(--ink-soft);
+    border-left: 1px solid var(--line);
+    padding-left: var(--s-5);
+    line-height: 1.6;
+  }
+  .offer__meta strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 4px; }
+  @media (max-width: 1000px) {
+    .offer__item { grid-template-columns: 60px 1fr; }
+    .offer__heading { grid-column: 2; }
+    .offer__body { grid-column: 2; }
+    .offer__meta { grid-column: 2; text-align: left; border-left: 0; padding-left: 0; padding-top: var(--s-3); border-top: 1px solid var(--line); }
+  }
+
+  /* ---- Method (process) ---- */
+  .method__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--s-5);
+    margin-top: var(--s-6);
+  }
+  .method__step {
+    padding: var(--s-6);
+    background: rgba(244,239,230,0.04);
+    border: 1px solid rgba(244,239,230,0.1);
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .method__step:hover { border-color: var(--clay); background: rgba(196,117,84,0.06); }
+  .method__step:nth-child(1) { grid-column: span 5; min-height: 280px; }
+  .method__step:nth-child(2) { grid-column: span 4; min-height: 240px; }
+  .method__step:nth-child(3) { grid-column: span 3; min-height: 240px; }
+  .method__step:nth-child(4) { grid-column: span 4; }
+  .method__step:nth-child(5) { grid-column: span 4; }
+  .method__step:nth-child(6) { grid-column: span 4; }
+  .method__step b { font-family: var(--serif); font-size: var(--t-sm); color: var(--clay); display: block; margin-bottom: var(--s-7); letter-spacing: 0.04em; }
+  .method__step h3 { font-family: var(--serif); font-weight: 400; font-size: var(--t-xl); line-height: 1.15; color: var(--paper); margin-bottom: var(--s-3); letter-spacing: -0.005em; }
+  .method__step p { font-size: var(--t-sm); line-height: 1.6; color: rgba(244,239,230,0.7); }
+  @media (max-width: 880px) {
+    .method__grid { grid-template-columns: 1fr; }
+    .method__step { grid-column: span 12 !important; min-height: auto !important; }
+  }
+
+  /* ---- Pull quote section ---- */
+  .pull { background: var(--clay); color: var(--ink); padding: var(--s-10) var(--s-6); text-align: center; }
+  .pull__inner { max-width: 1100px; margin: 0 auto; }
+  .pull__q {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 76px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .pull__q em { font-style: italic; }
+  .pull__attr { margin-top: var(--s-6); font-size: var(--t-xs); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); opacity: 0.7; }
+
+  /* ---- Voices ---- */
+  .voices__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-5); margin-top: var(--s-6); }
+  .voice {
+    padding: var(--s-6);
+    background: rgba(244,239,230,0.04);
+    border: 1px solid rgba(244,239,230,0.1);
+    display: flex; flex-direction: column;
+  }
+  .voice__q { font-family: var(--serif); font-size: var(--t-md); line-height: 1.5; color: var(--paper); margin-bottom: var(--s-5); flex: 1; letter-spacing: -0.005em; }
+  .voice__attr { padding-top: var(--s-4); border-top: 1px solid rgba(244,239,230,0.15); font-size: var(--t-xs); letter-spacing: 0.1em; text-transform: uppercase; color: rgba(244,239,230,0.6); }
+  .voice__attr strong { display: block; color: var(--paper); margin-bottom: 4px; font-weight: 500; }
+  @media (max-width: 880px) { .voices__grid { grid-template-columns: 1fr; } }
+
+  /* ---- FAQ (dark) ---- */
+  .faq-b { background: var(--paper); color: var(--ink); }
+  .faq-b .sec-b__title { color: var(--ink); }
+  .faq-b .sec-b__title em { color: var(--clay-deep); }
+  .faq-b .sec-b__num { color: var(--clay-deep); border-top-color: var(--clay-deep); }
+
+  .faq-b__list { margin-top: var(--s-5); }
+  .faq-b__item { border-top: 1px solid var(--ink); }
+  .faq-b__item:last-child { border-bottom: 1px solid var(--ink); }
+  .faq-b__item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: var(--s-6) 0;
+    display: grid;
+    grid-template-columns: 60px 1fr 40px;
+    gap: var(--s-5);
+    align-items: baseline;
+  }
+  .faq-b__item summary::-webkit-details-marker { display: none; }
+  .faq-b__item summary > b { font-family: var(--serif); font-size: var(--t-sm); color: var(--clay-deep); letter-spacing: 0.04em; }
+  .faq-b__item summary > span { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 32px); color: var(--ink); line-height: 1.2; font-weight: 400; letter-spacing: -0.01em; }
+  .faq-b__item summary::after { content: "→"; color: var(--clay-deep); font-size: var(--t-xl); transition: transform 0.3s; text-align: right; }
+  .faq-b__item[open] summary::after { transform: rotate(90deg); }
+  .faq-b__answer { padding: 0 0 var(--s-7) 80px; font-size: var(--t-base); line-height: 1.7; color: var(--ink-soft); max-width: 70ch; }
+  @media (max-width: 720px) {
+    .faq-b__item summary { grid-template-columns: 40px 1fr 30px; gap: var(--s-3); }
+    .faq-b__answer { padding-left: 50px; }
+  }
+
+  /* ---- Contact CTA ---- */
+  .contact-b { padding: var(--s-11) var(--s-6); }
+  .contact-b__inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--s-9); }
+  .contact-b__copy h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 6vw, 96px);
+    line-height: 0.98;
+    color: var(--paper);
+    letter-spacing: -0.03em;
+    margin-bottom: var(--s-6);
+  }
+  .contact-b__copy h2 em { font-style: italic; color: var(--clay); }
+  .contact-b__copy > p { font-size: var(--t-lg); line-height: 1.55; color: rgba(244,239,230,0.75); margin-bottom: var(--s-7); max-width: 44ch; }
+  .contact-b__direct { display: flex; flex-direction: column; gap: var(--s-3); padding-top: var(--s-5); border-top: 1px solid rgba(244,239,230,0.18); font-size: var(--t-sm); }
+  .contact-b__direct > div { display: flex; gap: var(--s-5); }
+  .contact-b__direct span:first-child { color: var(--clay); text-transform: uppercase; letter-spacing: 0.14em; font-size: var(--t-xs); width: 80px; flex-shrink: 0; padding-top: 3px; }
+  .contact-b__direct a { color: var(--paper); text-decoration: none; border-bottom: 1px solid rgba(244,239,230,0.3); }
+  .contact-b__direct a:hover { color: var(--clay); border-color: var(--clay); }
+
+  .form-b { background: rgba(244,239,230,0.04); border: 1px solid rgba(244,239,230,0.12); padding: var(--s-7); }
+  .form-b__row { margin-bottom: var(--s-5); display: flex; flex-direction: column; }
+  .form-b__row label { font-size: var(--t-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); margin-bottom: var(--s-3); }
+  .form-b__row input,
+  .form-b__row select,
+  .form-b__row textarea {
+    font: 400 var(--t-base)/1.5 var(--sans);
+    color: var(--paper);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(244,239,230,0.3);
+    padding: var(--s-3) 0;
+    border-radius: 0;
+    transition: border-color 0.2s;
+  }
+  .form-b__row select { color: var(--paper); }
+  .form-b__row select option { background: var(--ink); color: var(--paper); }
+  .form-b__row input:focus,
+  .form-b__row select:focus,
+  .form-b__row textarea:focus { outline: none; border-color: var(--clay); }
+  .form-b__row textarea { resize: vertical; min-height: 100px; font-family: var(--sans); }
+  .form-b__consent { display: flex; gap: var(--s-3); align-items: flex-start; margin: var(--s-5) 0; font-size: var(--t-sm); color: rgba(244,239,230,0.7); line-height: 1.55; }
+  .form-b__consent input { margin-top: 4px; accent-color: var(--clay); flex-shrink: 0; }
+  .form-b__consent a { color: var(--paper); }
+  .form-b__submit { width: 100%; padding: 18px 24px; background: var(--clay); color: var(--ink); border: none; font-size: var(--t-base); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; transition: background 0.2s; }
+  .form-b__submit:hover { background: #d8825d; }
+  @media (max-width: 960px) { .contact-b__inner { grid-template-columns: 1fr; gap: var(--s-7); } }
+
+  /* ---- Footer (dark) ---- */
+  .footer-b { border-top: 1px solid rgba(244,239,230,0.12); padding: var(--s-7) var(--s-6) var(--s-5); }
+  .footer-b__inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--s-7); padding-bottom: var(--s-6); border-bottom: 1px solid rgba(244,239,230,0.1); }
+  .footer-b__brand img { height: 28px; margin-bottom: var(--s-4); }
+  .footer-b__brand p { font-size: var(--t-sm); line-height: 1.6; color: rgba(244,239,230,0.6); max-width: 320px; }
+  .footer-b__col h4 { color: var(--clay); font-size: var(--t-xs); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: var(--s-4); font-weight: 500; }
+  .footer-b__col ul { display: flex; flex-direction: column; gap: var(--s-3); }
+  .footer-b__col a { color: rgba(244,239,230,0.7); text-decoration: none; font-size: var(--t-sm); transition: color 0.2s; }
+  .footer-b__col a:hover { color: var(--paper); }
+  .footer-b__bottom { max-width: 1320px; margin: 0 auto; padding-top: var(--s-4); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--s-4); font-size: var(--t-xs); color: rgba(244,239,230,0.4); letter-spacing: 0.06em; }
+  @media (max-width: 720px) { .footer-b__inner { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "name": "sicht:weise — Executive Coaching",
+  "image": "https://www.sicht-weise.de/assets/og-image.jpg",
+  "@id": "https://www.sicht-weise.de/",
+  "url": "https://www.sicht-weise.de/",
+  "telephone": "+49 89 0000000",
+  "priceRange": "€€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Straße Hausnummer]",
+    "addressLocality": "München",
+    "postalCode": "[PLZ]",
+    "addressCountry": "DE"
+  },
+  "areaServed": ["DE", "AT", "CH"],
+  "founder": {
+    "@type": "Person",
+    "name": "[Vorname Nachname]",
+    "jobTitle": "Executive Coach"
+  },
+  "knowsAbout": [
+    "Executive Coaching",
+    "Leadership Development",
+    "Mental Health Coaching",
+    "Burnout-Prävention",
+    "Team-Workshops"
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+
+<header class="nav-b" id="nav">
+  <div class="nav-b__inner">
+    <a href="index.html" aria-label="sicht:weise Startseite">
+      <img class="nav-b__logo" src="assets/logo-light.svg" alt="sicht:weise" />
+    </a>
+    <nav class="nav-b__links" aria-label="Hauptnavigation">
+      <a href="#manifesto">Haltung</a>
+      <a href="#offer">Angebot</a>
+      <a href="#method">Methode</a>
+      <a href="#voices">Stimmen</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-b__cta" href="#contact">Gespräch buchen</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ COVER / HERO ============ -->
+  <section class="cover" aria-labelledby="cover-title">
+    <div class="cover__top">
+      <span>sicht:weise — Coaching № 01 / 2026</span>
+      <span>München · Wien · Zürich</span>
+    </div>
+
+    <div class="cover__main">
+      <h1 class="cover__h1" id="cover-title">
+        Tiefer<br />
+        <span class="l-italic">sehen.</span><br />
+        Klarer<br />
+        <span class="l-outline">führen.</span>
+      </h1>
+      <p class="cover__lede">
+        Executive Coaching für Menschen, die in Verantwortungsrollen
+        nicht funktionieren, sondern gestalten wollen — mit
+        Substanz, Ruhe und der Bereitschaft, genau hinzusehen.
+      </p>
+    </div>
+
+    <div class="cover__bottom">
+      <div class="cover__cta-row">
+        <a class="btn-clay" href="#contact">
+          Erstgespräch vereinbaren
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 9h12M10 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="btn-link-b" href="#offer">Angebot ansehen</a>
+      </div>
+      <div class="cover__factoid">
+        <b>15+ Jahre</b>
+        <span>Erfahrung in Beratung, Führung und Begleitung im DACH-Raum.</span>
+      </div>
+      <div class="cover__factoid">
+        <b>200+</b>
+        <span>Begleitete Klient:innen aus Industrie, Tech, NGO und öffentlichem Sektor.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__inner">
+      <span>Führung mit Substanz</span>
+      <span>Resilienz statt Härte</span>
+      <span>Klarheit unter Druck</span>
+      <span>Tiefer sehen</span>
+      <span>Mental Health am Top</span>
+      <span>Vertraulich · DSGVO-konform</span>
+      <span>Führung mit Substanz</span>
+      <span>Resilienz statt Härte</span>
+      <span>Klarheit unter Druck</span>
+      <span>Tiefer sehen</span>
+      <span>Mental Health am Top</span>
+      <span>Vertraulich · DSGVO-konform</span>
+    </div>
+  </div>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="sec-b" id="manifesto" aria-labelledby="manifesto-title">
+    <div class="sec-b__inner">
+      <div class="sec-b__head">
+        <div class="sec-b__num">№ 01 / Haltung</div>
+        <h2 class="sec-b__title" id="manifesto-title">
+          Wer in Verantwortung steht,<br />braucht <em>einen Ort</em>,<br />der nichts will.
+        </h2>
+      </div>
+
+      <div class="manifesto__grid">
+        <p class="manifesto__lead">
+          Coaching ist kein Werkzeugkasten. Es ist die Disziplin, sich selbst
+          beim Denken zuzuhören — bis das Wesentliche wieder hörbar wird.
+        </p>
+        <div class="manifesto__body">
+          <p>
+            Ich arbeite mit Führungskräften, Geschäftsführer:innen und Menschen
+            in fordernden Phasen. Mein Beitrag ist nicht, mehr Antworten zu geben —
+            sondern bessere Fragen, einen geschützten Rahmen und die Erfahrung,
+            mit dem auszuhalten, was zunächst unbequem ist.
+          </p>
+          <p>
+            Mein Hintergrund verbindet zwei Welten: 12 Jahre in Führungs- und
+            Beratungsrollen in Industrie und Tech, gefolgt von einer fundierten
+            Ausbildung in systemischem Coaching und achtsamkeitsbasierten
+            Methoden. Beides braucht es, um auf dieser Ebene zu arbeiten.
+          </p>
+          <div class="manifesto__sig">
+            <div>
+              <strong>[Vorname Nachname]</strong>
+              Systemischer Coach (DGfC) · MBSR-Lehrerin
+            </div>
+            <div>
+              <strong>EMCC Senior Practitioner</strong>
+              M.Sc. Wirtschaftspsychologie · ICF zertifiziert
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFFER ============ -->
+  <section class="sec-b offer" id="offer" aria-labelledby="offer-title">
+    <div class="sec-b__inner">
+      <div class="sec-b__head">
+        <div class="sec-b__num">№ 02 / Angebot</div>
+        <h2 class="sec-b__title" id="offer-title">
+          Drei Formate.<br />Eine <em>Haltung.</em>
+        </h2>
+      </div>
+
+      <div class="offer__list">
+        <article class="offer__item">
+          <div class="offer__num">01</div>
+          <h3 class="offer__heading">Executive Coaching<small>1:1 · für Führung mit Substanz</small></h3>
+          <div class="offer__body">
+            <p>
+              Längerfristige Begleitung für Führungskräfte in anspruchsvollen Rollen.
+              Themen wie Rollenklärung, Entscheidungsfindung, Konflikt, Strategie
+              und persönliche Stabilität — verbunden mit der Frage, wie Sie
+              führen wollen, nicht nur müssen.
+            </p>
+            <ul>
+              <li>Rollenklärung</li>
+              <li>Konfliktarbeit</li>
+              <li>Strategie</li>
+              <li>Selbstführung</li>
+            </ul>
+          </div>
+          <div class="offer__meta">
+            <strong>6 – 12 Sitzungen</strong>
+            ca. 90 Min · DE / EN<br />
+            Online oder vor Ort
+          </div>
+        </article>
+
+        <article class="offer__item">
+          <div class="offer__num">02</div>
+          <h3 class="offer__heading">Resilienz &amp; Mental Health<small>Einzelbegleitung in Belastungsphasen</small></h3>
+          <div class="offer__body">
+            <p>
+              Vertrauliche Begleitung in Phasen von Druck, Erschöpfung oder
+              drohendem Burnout — bevor körperliche Symptome zur Pflichtaufgabe
+              werden. Ressourcenorientiert, achtsamkeitsbasiert, klar abgegrenzt
+              zur Psychotherapie.
+            </p>
+            <ul>
+              <li>Stressprävention</li>
+              <li>Erschöpfung</li>
+              <li>Selbstführung</li>
+              <li>Grenzen</li>
+            </ul>
+          </div>
+          <div class="offer__meta">
+            <strong>8 – 16 Sitzungen</strong>
+            ca. 60 Min · DE / EN<br />
+            Vertraulich, urteilsfrei
+          </div>
+        </article>
+
+        <article class="offer__item">
+          <div class="offer__num">03</div>
+          <h3 class="offer__heading">Teams &amp; Klausuren<small>Workshops · Moderation · Diagnose</small></h3>
+          <div class="offer__body">
+            <p>
+              Maßgeschneiderte Formate für Führungskreise und Teams in
+              Veränderung — von zweitägigen Klausuren bis zu längerfristiger
+              Begleitung mit Reflexionsschleifen.
+            </p>
+            <ul>
+              <li>Klausurtage</li>
+              <li>Konfliktmoderation</li>
+              <li>Team-Diagnose</li>
+              <li>Retrospektiven</li>
+            </ul>
+          </div>
+          <div class="offer__meta">
+            <strong>1 – 3 Tage</strong>
+            Inhouse oder extern<br />
+            Auf Anfrage
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHOD ============ -->
+  <section class="sec-b" id="method" aria-labelledby="method-title">
+    <div class="sec-b__inner">
+      <div class="sec-b__head">
+        <div class="sec-b__num">№ 03 / Methode</div>
+        <h2 class="sec-b__title" id="method-title">
+          Kein Modell.<br />Ein <em>verlässliches</em><br />Vorgehen.
+        </h2>
+      </div>
+      <div class="method__grid">
+        <div class="method__step">
+          <b>01 — Kennenlernen</b>
+          <h3>30 Minuten, kostenlos.</h3>
+          <p>Wir schauen, ob Chemie, Anliegen und Format zusammenpassen. Ohne Verbindlichkeit.</p>
+        </div>
+        <div class="method__step">
+          <b>02 — Klärung</b>
+          <h3>Worum geht es wirklich?</h3>
+          <p>Wir formulieren, was sich verändern soll — und woran wir merken werden, dass es sich verändert hat.</p>
+        </div>
+        <div class="method__step">
+          <b>03 — Vertrag</b>
+          <h3>Rahmen, Rhythmus, Vertraulichkeit.</h3>
+          <p>Klare Vereinbarungen schaffen den Raum, in dem Arbeit möglich wird.</p>
+        </div>
+        <div class="method__step">
+          <b>04 — Begleitung</b>
+          <h3>Regelmäßige Arbeit.</h3>
+          <p>Sitzungen alle 2–4 Wochen. In Ihrem Rhythmus, mit der nötigen Disziplin.</p>
+        </div>
+        <div class="method__step">
+          <b>05 — Reflexion</b>
+          <h3>Halbzeit-Check.</h3>
+          <p>Was wirkt, was fehlt, was muss nachjustiert werden — explizit, nicht nebenbei.</p>
+        </div>
+        <div class="method__step">
+          <b>06 — Abschluss</b>
+          <h3>Verankerung.</h3>
+          <p>Was bleibt? Wir sichern, was Sie mitnehmen — und schließen bewusst ab.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <section class="pull" aria-label="Leitsatz">
+    <div class="pull__inner">
+      <p class="pull__q">
+        „Wer <em>tiefer sieht,</em><br />
+        muss weniger erklären."
+      </p>
+      <p class="pull__attr">— Leitsatz, sicht:weise</p>
+    </div>
+  </section>
+
+  <!-- ============ VOICES ============ -->
+  <section class="sec-b" id="voices" aria-labelledby="voices-title">
+    <div class="sec-b__inner">
+      <div class="sec-b__head">
+        <div class="sec-b__num">№ 04 / Stimmen</div>
+        <h2 class="sec-b__title" id="voices-title">
+          Was Klient:innen<br />über die Arbeit sagen.
+        </h2>
+      </div>
+      <div class="voices__grid">
+        <blockquote class="voice">
+          <p class="voice__q">„Ich kam mit dem Wunsch, klarer zu führen. Ich gehe mit dem Wissen, wer ich bin, wenn ich führe. Das ist ein anderer Maßstab."</p>
+          <footer class="voice__attr"><strong>M. K.</strong>Bereichsleitung Industrie · München</footer>
+        </blockquote>
+        <blockquote class="voice">
+          <p class="voice__q">„Ruhig, klar, manchmal unbequem — aber immer in einer Form, die mich gestärkt zurücklässt."</p>
+          <footer class="voice__attr"><strong>S. L.</strong>Beraterin · Wien</footer>
+        </blockquote>
+        <blockquote class="voice">
+          <p class="voice__q">„Wir haben als Team einen ehrlicheren Umgang miteinander gefunden. Das war länger fällig, als ich zugeben wollte."</p>
+          <footer class="voice__attr"><strong>T. R.</strong>CTO Scale-up · Zürich</footer>
+        </blockquote>
+        <blockquote class="voice">
+          <p class="voice__q">„Nach Monaten am Limit habe ich zum ersten Mal das Gefühl gehabt, dass jemand wirklich zuhört — ohne mich reparieren zu wollen."</p>
+          <footer class="voice__attr"><strong>A. B.</strong>Geschäftsführung NGO · Berlin</footer>
+        </blockquote>
+        <blockquote class="voice">
+          <p class="voice__q">„Der Unterschied zu früheren Coachings: hier gibt es keine Bühne. Nur die Arbeit. Genau das war, was ich gebraucht habe."</p>
+          <footer class="voice__attr"><strong>J. P.</strong>VP People · SaaS · Berlin</footer>
+        </blockquote>
+        <blockquote class="voice">
+          <p class="voice__q">„Drei Sitzungen reichten, um eine Entscheidung zu treffen, die ich zwei Jahre vor mir hergeschoben hatte."</p>
+          <footer class="voice__attr"><strong>R. F.</strong>Gründer · Tech · Hamburg</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec-b faq-b" id="faq" aria-labelledby="faq-title">
+    <div class="sec-b__inner">
+      <div class="sec-b__head">
+        <div class="sec-b__num">№ 05 / FAQ</div>
+        <h2 class="sec-b__title" id="faq-title">
+          Was vorher<br />gefragt wird.
+        </h2>
+      </div>
+      <div class="faq-b__list">
+        <details class="faq-b__item">
+          <summary><b>Q01</b><span>Was unterscheidet Coaching von Therapie?</span></summary>
+          <p class="faq-b__answer">Coaching ist eine zukunfts- und ressourcenorientierte Begleitung für Menschen in beruflichen oder persönlichen Veränderungsprozessen. Es ist kein Ersatz für Psychotherapie. Wenn Anzeichen einer behandlungsbedürftigen Erkrankung vorliegen, empfehle ich offen die Anbindung an ärztliche oder psychotherapeutische Versorgung — gerne auch parallel zur Begleitung.</p>
+        </details>
+        <details class="faq-b__item">
+          <summary><b>Q02</b><span>Wie lange dauert ein Coaching-Prozess?</span></summary>
+          <p class="faq-b__answer">Die meisten Prozesse umfassen 6 bis 12 Sitzungen über drei bis sechs Monate. Es gibt auch fokussierte Kurzformate von drei Sitzungen — etwa zur Entscheidungsklärung. Der Rahmen wird gemeinsam im Auftaktgespräch festgelegt.</p>
+        </details>
+        <details class="faq-b__item">
+          <summary><b>Q03</b><span>Was kostet eine Sitzung?</span></summary>
+          <p class="faq-b__answer">Eine Einzelsitzung dauert 60–90 Minuten. Honorare bewegen sich je nach Format zwischen 180 € und 320 € pro Sitzung. Für Unternehmen werden individuelle Angebote erstellt. Konditionen werden offen im Erstgespräch besprochen.</p>
+        </details>
+        <details class="faq-b__item">
+          <summary><b>Q04</b><span>Online oder vor Ort?</span></summary>
+          <p class="faq-b__answer">Beides ist möglich. Online wird über eine DSGVO-konforme Plattform gearbeitet. Vor-Ort-Sitzungen finden in München statt; auf Anfrage auch in Wien und Zürich.</p>
+        </details>
+        <details class="faq-b__item">
+          <summary><b>Q05</b><span>Werden meine Daten vertraulich behandelt?</span></summary>
+          <p class="faq-b__answer">Selbstverständlich. Es besteht berufliche Verschwiegenheit. Alle Daten werden DSGVO-konform behandelt; Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+        </details>
+        <details class="faq-b__item">
+          <summary><b>Q06</b><span>Sind die Kosten steuerlich absetzbar?</span></summary>
+          <p class="faq-b__answer">In vielen Fällen ja — etwa als Werbungskosten oder Betriebsausgabe. Bitte individuell mit der Steuerberatung abklären. Sie erhalten in jedem Fall eine ordnungsgemäße Rechnung.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact-b" id="contact" aria-labelledby="contact-title">
+    <div class="contact-b__inner">
+      <div class="contact-b__copy">
+        <div class="sec-b__num" style="display: inline-block; margin-bottom: var(--s-6);">№ 06 / Kontakt</div>
+        <h2 id="contact-title">
+          Es beginnt mit einem <em>Gespräch.</em>
+        </h2>
+        <p>
+          Schreiben Sie mir, worum es geht — in zwei, drei Sätzen reicht.
+          Wir vereinbaren ein 30-minütiges Kennenlernen. Kostenlos.
+          Unverbindlich. Vertraulich.
+        </p>
+
+        <div class="contact-b__direct">
+          <div>
+            <span>E-Mail</span>
+            <a href="mailto:kontakt@sicht-weise.de">kontakt@sicht-weise.de</a>
+          </div>
+          <div>
+            <span>Telefon</span>
+            <a href="tel:+49890000000">+49 89 000 000 0</a>
+          </div>
+          <div>
+            <span>Praxis</span>
+            <span style="color: var(--paper);">[Straße], 80xxx München</span>
+          </div>
+          <div>
+            <span>Termine</span>
+            <span style="color: var(--paper);">Mo – Fr, 9 – 18 Uhr</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="form-b" method="post" action="#" novalidate aria-label="Kontaktformular">
+        <div class="form-b__row">
+          <label for="fb-name">Name</label>
+          <input type="text" id="fb-name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-b__row">
+          <label for="fb-email">E-Mail</label>
+          <input type="email" id="fb-email" name="email" required autocomplete="email" />
+        </div>
+        <div class="form-b__row">
+          <label for="fb-topic">Anliegen</label>
+          <select id="fb-topic" name="topic">
+            <option value="executive">Executive Coaching</option>
+            <option value="mental">Resilienz / Mental Health</option>
+            <option value="team">Team / Klausur</option>
+            <option value="other">Etwas anderes</option>
+          </select>
+        </div>
+        <div class="form-b__row">
+          <label for="fb-message">Nachricht (optional)</label>
+          <textarea id="fb-message" name="message" rows="3"></textarea>
+        </div>
+        <label class="form-b__consent">
+          <input type="checkbox" id="fb-consent" name="consent" required />
+          <span>
+            Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen
+            und willige in die Verarbeitung meiner Daten zur Beantwortung meiner Anfrage ein.
+            Widerruf jederzeit möglich.
+          </span>
+        </label>
+        <button type="submit" class="form-b__submit">Anfrage senden</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-b" aria-label="Fußbereich">
+  <div class="footer-b__inner">
+    <div class="footer-b__brand">
+      <img src="assets/logo-light.svg" alt="sicht:weise" />
+      <p>Executive Coaching für Führung mit Substanz. Online und vor Ort in München, Wien und Zürich.</p>
+    </div>
+    <div class="footer-b__col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#manifesto">Haltung</a></li>
+        <li><a href="#offer">Angebot</a></li>
+        <li><a href="#method">Methode</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-b__col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:kontakt@sicht-weise.de">kontakt@sicht-weise.de</a></li>
+        <li><a href="tel:+49890000000">+49 89 000 000 0</a></li>
+      </ul>
+    </div>
+    <div class="footer-b__col">
+      <h4>Rechtliches</h4>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-b__bottom">
+    <span>© 2026 sicht:weise — [Vorname Nachname]</span>
+    <span>DSGVO-konform · Keine externen Tracker · Schriften lokal</span>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie-Hinweis" hidden>
+  <p>
+    Diese Website verwendet ausschließlich technisch notwendige Cookies und lädt
+    <strong>keine externen Tracker, Fonts oder Embeds</strong>. Mehr in der
+    <a href="datenschutz.html">Datenschutzerklärung</a>.
+  </p>
+  <button type="button" id="cookie-ok">Verstanden</button>
+</div>
+
+<script>
+  (function () {
+    var nav = document.getElementById('nav');
+    function onScroll() {
+      if (window.scrollY > 8) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
+  (function () {
+    var banner = document.getElementById('cookie-banner');
+    var key = 'sw-cookie-ack';
+    try { if (!localStorage.getItem(key)) banner.hidden = false; }
+    catch (e) { banner.hidden = false; }
+    document.getElementById('cookie-ok').addEventListener('click', function () {
+      banner.hidden = true;
+      try { localStorage.setItem(key, '1'); } catch (e) {}
+    });
+  })();
+
+  document.querySelector('form.form-b').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var consent = document.getElementById('fb-consent');
+    if (!consent.checked) { consent.focus(); return; }
+    alert('Danke! In der Live-Version wird Ihre Nachricht hier sicher verschickt.');
+  });
+</script>
+</body>
+</html>
