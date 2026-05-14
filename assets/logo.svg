@@ -1,7 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" role="img" aria-label="sicht:weise">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56" role="img" aria-label="sicht:weise — Supervision &amp; Beratung">
   <title>sicht:weise</title>
-  <text x="0" y="86" font-family="'Iowan Old Style','Palatino Linotype','Palatino','Book Antiqua',Georgia,serif" font-size="92" font-weight="500" letter-spacing="-1.8" fill="#1a1d1c">sicht</text>
-  <circle cx="207" cy="40" r="9" fill="#c47554"></circle>
-  <circle cx="207" cy="76" r="9" fill="#1a1d1c"></circle>
-  <text x="226" y="86" font-family="'Iowan Old Style','Palatino Linotype','Palatino','Book Antiqua',Georgia,serif" font-size="92" font-weight="500" letter-spacing="-1.8" fill="#1a1d1c">weise</text>
+  <!-- Tree-in-circle mark (Variante A, light) -->
+  <circle cx="28" cy="28" r="26" fill="none" stroke="#4B864F" stroke-width="2"/>
+  <rect x="26.5" y="33" width="3" height="11" fill="#4B864F"/>
+  <polygon points="28,9 41,27 15,27" fill="#4B864F"/>
+  <polygon points="28,16 43,32 13,32" fill="#4B864F" opacity="0.55"/>
+  <!-- Wordmark -->
+  <text x="64" y="23" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="400" fill="#335333" letter-spacing="-0.01em">sicht<tspan fill="#4B864F">:</tspan>weise</text>
+  <text x="65" y="39" font-family="'Trebuchet MS', 'Gill Sans', sans-serif" font-size="9.5" font-weight="400" fill="#6B7F6B" letter-spacing="0.12em">SUPERVISION &amp; BERATUNG</text>
 </svg>
